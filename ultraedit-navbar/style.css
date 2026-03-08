@@ -1,0 +1,183 @@
+body{
+margin:0;
+padding:0; 
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+max-width:1200px;
+margin:auto;
+
+padding:10px 20px;
+
+border:1px solid rgb(80,80,80);
+border-radius:10px;
+}
+
+/* Logo */
+
+.logo img{
+width:150px;
+}
+
+/* Navigation */
+
+.nav-links{
+display:flex;
+gap:25px;
+
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.nav-links li a{
+text-decoration:none;
+color:black;
+
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+/* Dropdown icon */
+
+.dropdown-icon{
+width:10px;
+}
+
+/* Right section */
+
+.download{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+/* Download button */
+
+.download-btn{
+padding:6px 18px;
+
+border:none;
+border-radius:5px;
+
+background:rgb(255,208,0);
+
+cursor:pointer;
+}
+
+.download-btn:hover{
+opacity:0.8;
+}
+
+/* Language button */
+
+.language{
+display:flex;
+align-items:center;
+gap:5px;
+
+padding:6px 10px;
+
+border:none;
+background:transparent;
+
+cursor:pointer;
+}
+
+.language:hover{
+background:rgba(180,180,180,0.2);
+border-radius:5px;
+}
+
+.language img{
+width:14px;
+}
+
+/* Search icon */
+
+.search img{
+width:18px;
+cursor:pointer;
+}
+
+/* Hamburger */
+
+.menu-icon{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* Hide checkbox */
+
+#menu-toggle{
+display:none;
+}
+
+/* Tablet */
+
+@media (max-width:900px){
+
+.nav-links{
+gap:15px;
+font-size:14px;
+}
+
+.download{
+gap:10px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:700px){
+
+.menu-icon{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+
+top:70px;
+left:0;
+
+background:white;
+
+flex-direction:column;
+
+width:100%;
+
+display:none;
+
+padding:20px 0;
+
+gap:15px;
+
+border-top:1px solid gray;
+}
+
+.nav-links li{
+text-align:center;
+}
+
+.download{
+display:none;
+}
+
+/* When menu clicked */
+
+#menu-toggle:checked ~ .nav-links{
+display:flex;
+}
+
+}
